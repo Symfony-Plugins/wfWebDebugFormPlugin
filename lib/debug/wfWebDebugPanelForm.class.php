@@ -89,7 +89,7 @@ class wfWebDebugPanelForm extends sfWebDebugPanel
     if ($widget)
     {
       $data = sprintf(
-        '<td>%s</td><td style="text-align: center;">%s</td><td>%s</td>',
+        '<td style="border-bottom: 1px solid #666;">%s</td><td style="text-align: center; border-bottom: 1px solid #666;">%s</td><td style="border-bottom: 1px solid #666;">%s</td>',
         get_class($widget),
         $this->getBooleanImage($widget->getOption('is_hidden')),
         $this->parseOptions($widget->getOptions(), 'widget')
@@ -105,7 +105,7 @@ class wfWebDebugPanelForm extends sfWebDebugPanel
     if ($validator)
     {
       $data .= sprintf(
-        '<td>%s</td><td style="text-align: center;">%s</td><td>%s</td>',
+        '<td style="border-bottom: 1px solid #666;">%s</td><td style="text-align: center; border-bottom: 1px solid #666;">%s</td><td style="border-bottom: 1px solid #666;">%s</td>',
         get_class($validator),
         $this->getBooleanImage($validator->getOption('required')),
         $this->parseOptions($validator->getOptions(), 'validator')
@@ -118,7 +118,7 @@ class wfWebDebugPanelForm extends sfWebDebugPanel
       $data .= '<td colspan="3" style="text-align: center; font-weight: bold; background: #d8000c;">NO VALIDATOR SET</td>';
     }
     
-    return sprintf('<tr><td>%s</td>%s</tr>', $field_name, $data);
+    return sprintf('<tr><td style="border-bottom: 1px solid #666;">%s</td>%s</tr>', $field_name, $data);
   }
   
   /**
